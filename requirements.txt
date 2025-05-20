@@ -1,8 +1,9 @@
 fastapi==0.115.2
 uvicorn==0.34.2
 python-dotenv==1.1.0
-cohere==4.44  # or latest compatible version
+cohere==4.44
 langchain==0.3.25
 langchain-community==0.3.24
-sentence-transformers==2.2.2  # brings HuggingFaceEmbeddings
+sentence-transformers==2.2.2
 faiss-cpu==1.11.0
+gunicorn==23.0.0
