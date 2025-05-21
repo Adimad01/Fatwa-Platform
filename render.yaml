@@ -4,13 +4,11 @@ services:
     env: python
     plan: free
     buildCommand: pip install -r backend/requirements.txt
-    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port 10000
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
     envVars:
-      - key: aoQCSHKFoL1AQZfds9WZCV8ELYgtWKxrVNb0G19z
+      - key: COHERE_API_KEY
+        value: aoQCSHKFoL1AQZfds9WZCV8ELYgtWKxrVNb0G19z
         sync: false
-      - key: PORT
-        value: 10000
-
   - type: web
     name: fatwa-frontend
     env: static
